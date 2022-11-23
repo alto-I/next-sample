@@ -1,5 +1,6 @@
 import { GetServerSideProps, NextPage } from 'next';
 import Head from 'next/head';
+import { DelayInput } from '../components/DelayInput/index';
 
 type SSRProps = {
   message: string;
@@ -19,6 +20,7 @@ const SSR: NextPage<SSRProps> = (props) => {
           このページはサーバーサイドレンダリングによってアクセス時サーバーで描画されたページです。
         </p>
         <p>{message}</p>
+        <DelayInput />
       </main>
     </div>
   );
